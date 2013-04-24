@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * This file is part of the LDAP Caller ID application.
+ *
+ * LDAP Caller ID is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * LDAP Caller ID is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with LDAP Caller ID. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+	<!-- List of templates -->
+	<string-array name="templates_entries">
+		<item>CERN</item>
+	</string-array>
+	<string-array name="templates_values">
+		<item>cern</item>
+	</string-array>
+
+
+	<!-- CERN template values -->
+	<string name="CERN_template_number_filter">^(\\\\+4176487|076487|16|\\\\+4122767|022767)[0-9]{4}$</string>
+	<string name="CERN_template_replace">^(076487|16)([0-9]{4})$,+4176487$2;^(02276)(7[0-9]{4})$,+412276$2</string>
+	<string name="CERN_template_server">ldap.cern.ch</string>
+	<string name="CERN_template_port">636</string>
+	<string name="CERN_template_protocol">SSL</string>
+	<string name="CERN_template_binddn">cn=your_nice_login,ou=users,o=cern,c=ch</string>
+	<string name="CERN_template_basedn">o=cern,c=ch</string>
+	<string name="CERN_template_search_filter" formatted="false">(|(mobile=%n)(telephoneNumber=%n))</string>
+	<string name="CERN_template_name_attribute">displayName</string>
+	<string name="CERN_template_other_attributes">ou,physicalDeliveryOfficeName</string>
+
+	<string name="CERN_template_dialog_title">CERN NICE login</string>
+	<string name="CERN_template_dialog_username">Username:</string>
+	<string name="CERN_template_dialog_password">Password:</string>
+	<string name="CERN_template_dialog_ok">CERN settings created.</string>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * This file is part of the LDAP Caller ID application.
+ *
+ * LDAP Caller ID is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * LDAP Caller ID is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with LDAP Caller ID. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		android:id="@+id/preferences_menu_import"
+		android:alphabeticShortcut="i"
+		android:title="@string/preferences_menu_import"
+		android:icon="@android:drawable/ic_menu_upload" />
+
+	<item
+		android:id="@+id/preferences_menu_export"
+		android:alphabeticShortcut="e"
+		android:title="@string/preferences_menu_export"
+		android:icon="@android:drawable/ic_menu_save" />
+
+	<item
+		android:id="@+id/preferences_menu_delete"
+		android:alphabeticShortcut="d"
+		android:title="@string/preferences_menu_delete"
+		android:icon="@android:drawable/ic_menu_delete" />
+
+	<item
+		android:id="@+id/preferences_menu_template"
+		android:alphabeticShortcut="t"
+		android:title="@string/preferences_menu_template"
+		android:icon="@android:drawable/ic_menu_set_as" />
+
+	<item
+		android:id="@+id/preferences_menu_about"
+		android:alphabeticShortcut="a"
+		android:title="@string/preferences_menu_about"
+		android:icon="@android:drawable/ic_menu_help" />
+</menu>
