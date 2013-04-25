@@ -274,6 +274,8 @@ public class LDAPSearch extends Thread {
 		} catch (LDAPException e1) {
 			if (DEBUG > 0)
 				Log.e(TAG, "Can not create filter: " + e1.getExceptionMessage());
+
+			return null;
 		}
 
 		// If we need to follow referrals
