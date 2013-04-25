@@ -18,141 +18,141 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-	<!-- Application name -->
-	<string name="app_name">LDAP Caller ID</string>
+    <!-- Application name -->
+    <string name="app_name">LDAP Caller ID</string>
 
 
-	<!-- PermanentTouster messages -->
-	<string name="details_connection_error">Connection error</string>
-	<string name="details_result_error">Result error</string>
-	<string name="details_result_error_number">Result error (<xliff:g id="err_number">%s</xliff:g>)</string>
-	<string name="details_unknown_number">Unknown number</string>
-	<string name="details_searching">Searching...</string>
+    <!-- PermanentTouster messages -->
+    <string name="details_connection_error">Connection error</string>
+    <string name="details_result_error">Result error</string>
+    <string name="details_result_error_number">Result error (<xliff:g id="err_number">%s</xliff:g>)</string>
+    <string name="details_unknown_number">Unknown number</string>
+    <string name="details_searching">Searching...</string>
 
 
-	<!-- Welcome dialog -->
-	<string name="welcome_dialog_title">Welcome...</string>
-	<string name="welcome_dialog_message">Thank you for installing this application. Please continue by setting parameters on the following screen.\n\nCERN users can use prepared template (press Menu button, choose Template and select CERN).</string>
+    <!-- Welcome dialog -->
+    <string name="welcome_dialog_title">Welcome...</string>
+    <string name="welcome_dialog_message">Thank you for installing this application. Please continue by setting parameters on the following screen.\n\nCERN users can use prepared template (press Menu button, choose Template and select CERN).</string>
 
 
-	<!-- About dialog -->
-	<string name="about_dialog_title">About</string>
-	<string name="about_dialog_message">LDAP Caller ID is an application for the Android platform which helps you to identify incoming calls by searching the caller\'s number in the LDAP directory.\n\nFrom the principle, this application only works if the Wi-Fi, 3G or 4G data connection is available during the incoming call. The search results can be inaccurate if there is more then one person with the same phone number in the LDAP directory.\n\nPlease visit the project web page for more information:\n\n<a href="http://ldap-caller-id.googlecode.com">http://ldap-caller-id.googlecode.com</a></string>
+    <!-- About dialog -->
+    <string name="about_dialog_title">About</string>
+    <string name="about_dialog_message">LDAP Caller ID is an application for the Android platform which helps you to identify incoming calls by searching the caller\'s number in the LDAP directory.\n\nFrom the principle, this application only works if the Wi-Fi, 3G or 4G data connection is available during the incoming call. The search results can be inaccurate if there is more then one person with the same phone number in the LDAP directory.\n\nPlease visit the project web page for more information:\n\n<a href="http://ldap-caller-id.googlecode.com">http://ldap-caller-id.googlecode.com</a></string>
 
 
-	<!-- Template dialog -->
-	<string name="template_dialog_title">Template list</string>
-	<string name="template_ok">Template is set.</string>
+    <!-- Template dialog -->
+    <string name="template_dialog_title">Template list</string>
+    <string name="template_ok">Template is set.</string>
 
 
-	<!-- Import dialog -->
-	<string name="import_dialog_title">Import profile</string>
-	<string name="import_no_profile_error">No profile found.</string>
-	<string name="import_error">Unable to import the profile.</string>
-	<string name="import_ok">Profile imported.</string>
+    <!-- Import dialog -->
+    <string name="import_dialog_title">Import profile</string>
+    <string name="import_no_profile_error">No profile found.</string>
+    <string name="import_error">Unable to import the profile.</string>
+    <string name="import_ok">Profile imported.</string>
 
 
-	<!-- Export messages -->
-	<string name="export_error">Unable to export the profile.</string>
-	<string name="export_ok">Profile exported.</string>
+    <!-- Export messages -->
+    <string name="export_error">Unable to export the profile.</string>
+    <string name="export_ok">Profile exported.</string>
 
 
-	<!-- Delete dialog -->
-	<string name="delete_dialog_title">Delete profile</string>
-	<string name="delete_dialog_message">Do you really want to delete the profile?</string>
-	<string name="delete_no_profile_error">No profile found.</string>
-	<string name="delete_error">Unable to delete the profile.</string>
-	<string name="delete_ok">Profile deleted.</string>
+    <!-- Delete dialog -->
+    <string name="delete_dialog_title">Delete profile</string>
+    <string name="delete_dialog_message">Do you really want to delete the profile?</string>
+    <string name="delete_no_profile_error">No profile found.</string>
+    <string name="delete_error">Unable to delete the profile.</string>
+    <string name="delete_ok">Profile deleted.</string>
 
 
-	<!-- Preferences menu -->
-	<string name="preferences_menu_import">Import</string>
-	<string name="preferences_menu_export">Export</string>
-	<string name="preferences_menu_delete">Delete</string>
-	<string name="preferences_menu_template">Template</string>
-	<string name="preferences_menu_about">About</string>
+    <!-- Preferences menu -->
+    <string name="preferences_menu_import">Import</string>
+    <string name="preferences_menu_export">Export</string>
+    <string name="preferences_menu_delete">Delete</string>
+    <string name="preferences_menu_template">Template</string>
+    <string name="preferences_menu_about">About</string>
 
 
-	<!-- Preferences texts -->
-	<string name="preferences_general_category">General</string>
+    <!-- Preferences texts -->
+    <string name="preferences_general_category">General</string>
 
-	<string name="preferences_general_profile_title">Profile name</string>
-	<string name="preferences_general_profile_summary">Name of the settings profile</string>
-	<string name="preferences_general_profile_default">Default</string>
-	<string name="preferences_general_enabled_title">Enabled</string>
-	<string name="preferences_general_enabled_summary">Enable or disable the LDAP Caller ID functionality</string>
-	<string name="preferences_general_enabled_default">true</string>
-	<string name="preferences_general_position_title">Position</string>
-	<string name="preferences_general_position_summary">Position of the search result</string>
-	<string name="preferences_general_position_default">BOTTOM</string>
-	<string-array name="preferences_general_position_entries">
-		<item>On the top</item>
-		<item>In the middle</item>
-		<item>On the bottom</item>
-	</string-array>
-	<string-array name="preferences_general_position_values">
-		<item>TOP</item>
-		<item>MIDDLE</item>
-		<item>BOTTOM</item>
-	</string-array>
-	<string name="preferences_general_unknown_only_title">Only unknown numbers</string>
-	<string name="preferences_general_unknown_only_summary">Search only for numbers which are not in contacts</string>
-	<string name="preferences_general_unknown_only_default">true</string>
-	<string name="preferences_general_show_count_title">Show count</string>
-	<string name="preferences_general_show_count_summary">Shows number of results if multiple records found</string>
-	<string name="preferences_general_show_count_default">false</string>
-	<string name="preferences_general_number_filter_title">Number filter</string>
-	<string name="preferences_general_number_filter_summary">Search only for numbers given by this regular expression</string>
-	<string name="preferences_general_number_filter_default"></string>
-	<string name="preferences_general_replace_title">Replace</string>
-	<string name="preferences_general_replace_summary">Modify the incoming number by this regular expression (format: reg1,str1;reg2,str2)</string>
-	<string name="preferences_general_replace_default"></string>
-	<string name="preferences_general_faked_number_title">Faked number</string>
-	<string name="preferences_general_faked_number_summary">Fake incoming phone number. For testing purpose only.</string>
-	<string name="preferences_general_faked_number_default"></string>
+    <string name="preferences_general_profile_title">Profile name</string>
+    <string name="preferences_general_profile_summary">Name of the settings profile</string>
+    <string name="preferences_general_profile_default">Default</string>
+    <string name="preferences_general_enabled_title">Enabled</string>
+    <string name="preferences_general_enabled_summary">Enable or disable the LDAP Caller ID functionality</string>
+    <string name="preferences_general_enabled_default">true</string>
+    <string name="preferences_general_position_title">Position</string>
+    <string name="preferences_general_position_summary">Position of the search result</string>
+    <string name="preferences_general_position_default">BOTTOM</string>
+    <string-array name="preferences_general_position_entries">
+        <item>On the top</item>
+        <item>In the middle</item>
+        <item>On the bottom</item>
+    </string-array>
+    <string-array name="preferences_general_position_values">
+        <item>TOP</item>
+        <item>MIDDLE</item>
+        <item>BOTTOM</item>
+    </string-array>
+    <string name="preferences_general_unknown_only_title">Only unknown numbers</string>
+    <string name="preferences_general_unknown_only_summary">Search only for numbers which are not in contacts</string>
+    <string name="preferences_general_unknown_only_default">true</string>
+    <string name="preferences_general_show_count_title">Show count</string>
+    <string name="preferences_general_show_count_summary">Shows number of results if multiple records found</string>
+    <string name="preferences_general_show_count_default">false</string>
+    <string name="preferences_general_number_filter_title">Number filter</string>
+    <string name="preferences_general_number_filter_summary">Search only for numbers given by this regular expression</string>
+    <string name="preferences_general_number_filter_default"></string>
+    <string name="preferences_general_replace_title">Replace</string>
+    <string name="preferences_general_replace_summary">Modify the incoming number by this regular expression (format: reg1,str1;reg2,str2)</string>
+    <string name="preferences_general_replace_default"></string>
+    <string name="preferences_general_faked_number_title">Faked number</string>
+    <string name="preferences_general_faked_number_summary">Fake incoming phone number. For testing purpose only.</string>
+    <string name="preferences_general_faked_number_default"></string>
 
-	<string name="preferences_ldap_connection_category">LDAP connection</string>
+    <string name="preferences_ldap_connection_category">LDAP connection</string>
 
-	<string name="preferences_ldap_connection_server_title">Server</string>
-	<string name="preferences_ldap_connection_server_summary">Host name or IP of the LDAP server</string>
-	<string name="preferences_ldap_connection_server_default"></string>
-	<string name="preferences_ldap_connection_port_title">Port number</string>
-	<string name="preferences_ldap_connection_port_summary">Port number of the LDAP server</string>
-	<string name="preferences_ldap_connection_port_default">636</string>
-	<string name="preferences_ldap_connection_protocol_title">Protocol</string>
-	<string name="preferences_ldap_connection_protocol_summary">Communication protocol</string>
-	<string name="preferences_ldap_connection_protocol_default">SSL</string>
-	<string-array name="preferences_ldap_connection_protocol_entries">
-		<item>None</item>
-		<item>SSL</item>
-		<!--<item>StartTLS</item>-->
-	</string-array>
-	<string-array name="preferences_ldap_connection_protocol_values">
-		<item>NONE</item>
-		<item>SSL</item>
-		<!--<item>TLS</item>-->
-	</string-array>
-	<string name="preferences_ldap_connection_binddn_title">Bind DN</string>
-	<string name="preferences_ldap_connection_binddn_summary">Bind string necessary for the connection</string>
-	<string name="preferences_ldap_connection_binddn_default"></string>
-	<string name="preferences_ldap_connection_password_title">Password</string>
-	<string name="preferences_ldap_connection_password_summary">Bind password</string>
+    <string name="preferences_ldap_connection_server_title">Server</string>
+    <string name="preferences_ldap_connection_server_summary">Host name or IP of the LDAP server</string>
+    <string name="preferences_ldap_connection_server_default"></string>
+    <string name="preferences_ldap_connection_port_title">Port number</string>
+    <string name="preferences_ldap_connection_port_summary">Port number of the LDAP server</string>
+    <string name="preferences_ldap_connection_port_default">636</string>
+    <string name="preferences_ldap_connection_protocol_title">Protocol</string>
+    <string name="preferences_ldap_connection_protocol_summary">Communication protocol</string>
+    <string name="preferences_ldap_connection_protocol_default">SSL</string>
+    <string-array name="preferences_ldap_connection_protocol_entries">
+        <item>None</item>
+        <item>SSL</item>
+        <!--<item>StartTLS</item>-->
+    </string-array>
+    <string-array name="preferences_ldap_connection_protocol_values">
+        <item>NONE</item>
+        <item>SSL</item>
+        <!--<item>TLS</item>-->
+    </string-array>
+    <string name="preferences_ldap_connection_binddn_title">Bind DN</string>
+    <string name="preferences_ldap_connection_binddn_summary">Bind string necessary for the connection</string>
+    <string name="preferences_ldap_connection_binddn_default"></string>
+    <string name="preferences_ldap_connection_password_title">Password</string>
+    <string name="preferences_ldap_connection_password_summary">Bind password</string>
 
-	<string name="preferences_ldap_search_category">LDAP search</string>
+    <string name="preferences_ldap_search_category">LDAP search</string>
 
-	<string name="preferences_ldap_search_basedn_title">Base DN</string>
-	<string name="preferences_ldap_search_basedn_summary">Base DN string. Leave empty for entire server.</string>
-	<string name="preferences_ldap_search_basedn_default"></string>
-	<string name="preferences_ldap_search_filter_title">Search filter</string>
-	<string name="preferences_ldap_search_filter_summary">Filter used for the phone number search. The %n replaces the incoming phone number.</string>
-	<string name="preferences_ldap_search_filter_default"></string>
-	<string name="preferences_ldap_search_name_attribute_title">Name attribute</string>
-	<string name="preferences_ldap_search_name_attribute_summary">Attribute defining the caller\'s name</string>
-	<string name="preferences_ldap_search_name_attribute_default"></string>
-	<string name="preferences_ldap_search_other_attributes_title">Additional attributes</string>
-	<string name="preferences_ldap_search_other_attributes_summary">Additional informations about the caller (separated by comma)</string>
-	<string name="preferences_ldap_search_other_attributes_default"></string>
-	<string name="preferences_ldap_search_separator_title">Separator</string>
-	<string name="preferences_ldap_search_separator_summary">Visual separator of additional attributes</string>
-	<string name="preferences_ldap_search_separator_default">\\n</string>
+    <string name="preferences_ldap_search_basedn_title">Base DN</string>
+    <string name="preferences_ldap_search_basedn_summary">Base DN string. Leave empty for entire server.</string>
+    <string name="preferences_ldap_search_basedn_default"></string>
+    <string name="preferences_ldap_search_filter_title">Search filter</string>
+    <string name="preferences_ldap_search_filter_summary">Filter used for the phone number search. The %n replaces the incoming phone number.</string>
+    <string name="preferences_ldap_search_filter_default"></string>
+    <string name="preferences_ldap_search_name_attribute_title">Name attribute</string>
+    <string name="preferences_ldap_search_name_attribute_summary">Attribute defining the caller\'s name</string>
+    <string name="preferences_ldap_search_name_attribute_default"></string>
+    <string name="preferences_ldap_search_other_attributes_title">Additional attributes</string>
+    <string name="preferences_ldap_search_other_attributes_summary">Additional informations about the caller (separated by comma)</string>
+    <string name="preferences_ldap_search_other_attributes_default"></string>
+    <string name="preferences_ldap_search_separator_title">Separator</string>
+    <string name="preferences_ldap_search_separator_summary">Visual separator of additional attributes</string>
+    <string name="preferences_ldap_search_separator_default">\\n</string>
 </resources>

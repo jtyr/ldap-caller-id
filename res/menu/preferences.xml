@@ -18,33 +18,33 @@
 -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-	<item
-		android:id="@+id/preferences_menu_import"
-		android:alphabeticShortcut="i"
-		android:title="@string/preferences_menu_import"
-		android:icon="@android:drawable/ic_menu_upload" />
+    <item
+        android:id="@+id/preferences_menu_import"
+        android:alphabeticShortcut="i"
+        android:title="@string/preferences_menu_import"
+        android:icon="@android:drawable/ic_menu_upload" />
 
-	<item
-		android:id="@+id/preferences_menu_export"
-		android:alphabeticShortcut="e"
-		android:title="@string/preferences_menu_export"
-		android:icon="@android:drawable/ic_menu_save" />
+    <item
+        android:id="@+id/preferences_menu_export"
+        android:alphabeticShortcut="e"
+        android:title="@string/preferences_menu_export"
+        android:icon="@android:drawable/ic_menu_save" />
 
-	<item
-		android:id="@+id/preferences_menu_delete"
-		android:alphabeticShortcut="d"
-		android:title="@string/preferences_menu_delete"
-		android:icon="@android:drawable/ic_menu_delete" />
+    <item
+        android:id="@+id/preferences_menu_delete"
+        android:alphabeticShortcut="d"
+        android:title="@string/preferences_menu_delete"
+        android:icon="@android:drawable/ic_menu_delete" />
 
-	<item
-		android:id="@+id/preferences_menu_template"
-		android:alphabeticShortcut="t"
-		android:title="@string/preferences_menu_template"
-		android:icon="@android:drawable/ic_menu_set_as" />
+    <item
+        android:id="@+id/preferences_menu_template"
+        android:alphabeticShortcut="t"
+        android:title="@string/preferences_menu_template"
+        android:icon="@android:drawable/ic_menu_set_as" />
 
-	<item
-		android:id="@+id/preferences_menu_about"
-		android:alphabeticShortcut="a"
-		android:title="@string/preferences_menu_about"
-		android:icon="@android:drawable/ic_menu_help" />
+    <item
+        android:id="@+id/preferences_menu_about"
+        android:alphabeticShortcut="a"
+        android:title="@string/preferences_menu_about"
+        android:icon="@android:drawable/ic_menu_help" />
 </menu>

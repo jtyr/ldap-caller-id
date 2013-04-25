@@ -32,25 +32,25 @@ import android.util.Log;
  *
  */
 public class MyBroadcastReceiver extends BroadcastReceiver {
-	private static final String TAG = "LDAPCallerID: MyBroadcastReceiver";
-	private int DEBUG = 0;
+    private static final String TAG = "LDAPCallerID: MyBroadcastReceiver";
+    private int DEBUG = 0;
 
-	@Override
-	public void onReceive(Context context, Intent intent) {
-		if (DEBUG > 0)
-			Log.d(TAG, "Inside the BroadcastReceiver...");
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        if (DEBUG > 0)
+            Log.d(TAG, "Inside the BroadcastReceiver...");
 
-		// Check if the Phone State listener is already started
-		if (CallerService.phoneStateListener == null) {
-			if (DEBUG > 0)
-				Log.d(TAG, " - starting new listener");
+        // Check if the Phone State listener is already started
+        if (CallerService.phoneStateListener == null) {
+            if (DEBUG > 0)
+                Log.d(TAG, " - starting new listener");
 
-			// Start the Phone State listener
-			CallerService.phoneStateListener = new MyPhoneStateListener(context);
-			TelephonyManager telephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-			telephony.listen(CallerService.phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
-		} else if (DEBUG > 0) {
-			Log.d(TAG, " - listener already running!");
-		}
-	}
+            // Start the Phone State listener
+            CallerService.phoneStateListener = new MyPhoneStateListener(context);
+            TelephonyManager telephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+            telephony.listen(CallerService.phoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
+        } else if (DEBUG > 0) {
+            Log.d(TAG, " - listener already running!");
+        }
+    }
 }

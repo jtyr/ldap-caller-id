@@ -32,110 +32,110 @@ import android.util.Log;
  *
  */
 public class MyPhoneStateListener extends PhoneStateListener {
-	private static final String TAG = "LDAPCallerID: MyPhoneStateListener";
-	private int DEBUG = 0;
-	private static Context mContext = null;
+    private static final String TAG = "LDAPCallerID: MyPhoneStateListener";
+    private int DEBUG = 0;
+    private static Context mContext = null;
 
-	// Runnable which send a messages to the CallerService
-	private Runnable mOffhookShutdownMessageTask = null;
-	private Runnable mIdleShutdownMessageTask = null;
+    // Runnable which send a messages to the CallerService
+    private Runnable mOffhookShutdownMessageTask = null;
+    private Runnable mIdleShutdownMessageTask = null;
 
-	/**
-	 * Label for number Extras parameter.
-	 */
-	public static final String EXTRAS_NUMBER = "number";
-	/**
-	 * Label for call status Extras parameter.
-	 */
-	public static final String EXTRAS_CALL_STATUS = "call_status";
+    /**
+     * Label for number Extras parameter.
+     */
+    public static final String EXTRAS_NUMBER = "number";
+    /**
+     * Label for call status Extras parameter.
+     */
+    public static final String EXTRAS_CALL_STATUS = "call_status";
 
-	/**
-	 * Intent action.
-	 */
-	public static final String CALLERID_SHUTDOWN = MyPhoneStateListener.class.getPackage().getName() + "CALLERID_SHUTDOWN";
+    /**
+     * Intent action.
+     */
+    public static final String CALLERID_SHUTDOWN = MyPhoneStateListener.class.getPackage().getName() + "CALLERID_SHUTDOWN";
 
-	/**
-	 * Constructor which declares the <code>mIdleShutdownMessageTask</code> and
-	 * <code>mOffhookShutdownMessageTask</code> threads.
-	 * 
-	 * @param context
-	 *            Application context.
-	 */
-	public MyPhoneStateListener(Context context) {
-		mContext = context;
+    /**
+     * Constructor which declares the <code>mIdleShutdownMessageTask</code> and
+     * <code>mOffhookShutdownMessageTask</code> threads.
+     * 
+     * @param context
+     *            Application context.
+     */
+    public MyPhoneStateListener(Context context) {
+        mContext = context;
 
-		mIdleShutdownMessageTask = new Runnable() {
-			public void run() {
-				MyPhoneStateListener.sendIdleShutdownMessage();
-			}
-		};
+        mIdleShutdownMessageTask = new Runnable() {
+            public void run() {
+                MyPhoneStateListener.sendIdleShutdownMessage();
+            }
+        };
 
-		mOffhookShutdownMessageTask = new Runnable() {
-			public void run() {
-				MyPhoneStateListener.sendOffhookShutdownMessage();
-			}
-		};
-	}
+        mOffhookShutdownMessageTask = new Runnable() {
+            public void run() {
+                MyPhoneStateListener.sendOffhookShutdownMessage();
+            }
+        };
+    }
 
-	public void onCallStateChanged(int state, String incomingNumber){
-		if (DEBUG > 0)
-			Log.d(TAG, "Inside the PhoneStateListener...");
+    public void onCallStateChanged(int state, String incomingNumber){
+        if (DEBUG > 0)
+            Log.d(TAG, "Inside the PhoneStateListener...");
 
-		switch (state) {
-			case TelephonyManager.CALL_STATE_RINGING:
-				if (DEBUG > 0)
-					Log.d(TAG, " - RINGING");
+        switch (state) {
+            case TelephonyManager.CALL_STATE_RINGING:
+                if (DEBUG > 0)
+                    Log.d(TAG, " - RINGING");
 
-				// Start the service which shows the PermanentToast
-				Intent myIntent = new Intent(mContext, CallerService.class);
-				myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				myIntent.putExtra(EXTRAS_NUMBER, incomingNumber);
-				mContext.startService(myIntent);
+                // Start the service which shows the PermanentToast
+                Intent myIntent = new Intent(mContext, CallerService.class);
+                myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                myIntent.putExtra(EXTRAS_NUMBER, incomingNumber);
+                mContext.startService(myIntent);
 
-				break;
-			case TelephonyManager.CALL_STATE_OFFHOOK:
-				if (DEBUG > 0)
-					Log.d(TAG, " - OFFHOOK");
+                break;
+            case TelephonyManager.CALL_STATE_OFFHOOK:
+                if (DEBUG > 0)
+                    Log.d(TAG, " - OFFHOOK");
 
-				Handler handleOffHook = new Handler();
-				handleOffHook.post(mOffhookShutdownMessageTask);
+                Handler handleOffHook = new Handler();
+                handleOffHook.post(mOffhookShutdownMessageTask);
 
-				break;
-			case TelephonyManager.CALL_STATE_IDLE:
-				if (DEBUG > 0)
-					Log.d(TAG, " - IDLE");
+                break;
+            case TelephonyManager.CALL_STATE_IDLE:
+                if (DEBUG > 0)
+                    Log.d(TAG, " - IDLE");
 
-				Handler handleIdle = new Handler();
-				handleIdle.post(mIdleShutdownMessageTask);
+                Handler handleIdle = new Handler();
+                handleIdle.post(mIdleShutdownMessageTask);
 
-				break;
-			default:
-				if (DEBUG > 0)
-					Log.d(TAG, " - Other state: " + state);
+                break;
+            default:
+                if (DEBUG > 0)
+                    Log.d(TAG, " - Other state: " + state);
 
-				break;
-		}
-	}
+                break;
+        }
+    }
 
-	/**
-	 * Send the <code>CALLERID_SHUTDOWN</code> message when phone status changes
-	 * to Idle.
-	 */
-	public static void sendIdleShutdownMessage() {
-		Intent intent = new Intent(CALLERID_SHUTDOWN);
-		intent.putExtra(EXTRAS_CALL_STATUS, TelephonyManager.CALL_STATE_IDLE);
+    /**
+     * Send the <code>CALLERID_SHUTDOWN</code> message when phone status changes
+     * to Idle.
+     */
+    public static void sendIdleShutdownMessage() {
+        Intent intent = new Intent(CALLERID_SHUTDOWN);
+        intent.putExtra(EXTRAS_CALL_STATUS, TelephonyManager.CALL_STATE_IDLE);
 
-		mContext.sendBroadcast(intent);
-	}
+        mContext.sendBroadcast(intent);
+    }
 
-	/**
-	 * Send the <code>CALLERID_SHUTDOWN</code> message when phone status changes
-	 * to Offhook.
-	 */
-	public static void sendOffhookShutdownMessage() {
-		Intent intent = new Intent(CALLERID_SHUTDOWN);
-		intent.putExtra(EXTRAS_CALL_STATUS, TelephonyManager.CALL_STATE_OFFHOOK);
+    /**
+     * Send the <code>CALLERID_SHUTDOWN</code> message when phone status changes
+     * to Offhook.
+     */
+    public static void sendOffhookShutdownMessage() {
+        Intent intent = new Intent(CALLERID_SHUTDOWN);
+        intent.putExtra(EXTRAS_CALL_STATUS, TelephonyManager.CALL_STATE_OFFHOOK);
 
-		mContext.sendBroadcast(intent);
-	}
+        mContext.sendBroadcast(intent);
+    }
 }

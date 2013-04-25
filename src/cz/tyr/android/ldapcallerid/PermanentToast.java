@@ -29,48 +29,48 @@ import android.widget.Toast;
  * 
  */
 public class PermanentToast extends Thread {
-	private final static String TAG = "LDAPCallerID: PermanentToast";
-	private int DEBUG = 0;
-	private Toast mToast = null;
+    private final static String TAG = "LDAPCallerID: PermanentToast";
+    private int DEBUG = 0;
+    private Toast mToast = null;
 
-	/**
-	 * Constructor of the <code>PermanentToast</code>.
-	 * 
-	 * @param toast
-	 *            <code>Toast</code> to be shown permanently.
-	 */
-	public PermanentToast(Toast toast) {
-		if (DEBUG > 0)
-			Log.d(TAG, "Starting Toast thread...");
+    /**
+     * Constructor of the <code>PermanentToast</code>.
+     * 
+     * @param toast
+     *            <code>Toast</code> to be shown permanently.
+     */
+    public PermanentToast(Toast toast) {
+        if (DEBUG > 0)
+            Log.d(TAG, "Starting Toast thread...");
 
-		mToast = toast;
-	}
+        mToast = toast;
+    }
 
-	@Override
-	public void interrupt() {
-		if (DEBUG > 0)
-			Log.d(TAG, "Toast interuption");
+    @Override
+    public void interrupt() {
+        if (DEBUG > 0)
+            Log.d(TAG, "Toast interuption");
 
-		// Hide Toast
-		mToast.cancel();
+        // Hide Toast
+        mToast.cancel();
 
-		try {
-			super.interrupt();
-		} catch (Exception e) {
-			// Do nothing
-		}
-	}
+        try {
+            super.interrupt();
+        } catch (Exception e) {
+            // Do nothing
+        }
+    }
 
-	public void run() {
-		try {
-			// Keep the Toast alive until the thread runs  
-			while (true) {
-				mToast.show();
-				sleep(1850);
-			}
-		} catch (Exception e) {
-			if (DEBUG > 0)
-				Log.d(TAG, "Thread interupted");
-		}
-	}
+    public void run() {
+        try {
+            // Keep the Toast alive until the thread runs  
+            while (true) {
+                mToast.show();
+                sleep(1850);
+            }
+        } catch (Exception e) {
+            if (DEBUG > 0)
+                Log.d(TAG, "Thread interupted");
+        }
+    }
 }

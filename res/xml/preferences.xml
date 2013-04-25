@@ -18,137 +18,137 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-	<PreferenceCategory
-		android:title="@string/preferences_general_category">
+    <PreferenceCategory
+        android:title="@string/preferences_general_category">
 
-		<EditTextPreference
-			android:key="profile"
-			android:title="@string/preferences_general_profile_title"
-			android:summary="@string/preferences_general_profile_summary"
-			android:defaultValue="@string/preferences_general_profile_default"
-			android:maxLines="1" />
+        <EditTextPreference
+            android:key="profile"
+            android:title="@string/preferences_general_profile_title"
+            android:summary="@string/preferences_general_profile_summary"
+            android:defaultValue="@string/preferences_general_profile_default"
+            android:maxLines="1" />
 
-		<CheckBoxPreference
-			android:key="enabled"
-			android:title="@string/preferences_general_enabled_title"
-			android:summary="@string/preferences_general_enabled_summary"
-			android:defaultValue="@string/preferences_general_enabled_default" />
+        <CheckBoxPreference
+            android:key="enabled"
+            android:title="@string/preferences_general_enabled_title"
+            android:summary="@string/preferences_general_enabled_summary"
+            android:defaultValue="@string/preferences_general_enabled_default" />
 
-		<CheckBoxPreference
-			android:key="unknown_only"
-			android:title="@string/preferences_general_unknown_only_title"
-			android:summary="@string/preferences_general_unknown_only_summary"
-			android:defaultValue="@string/preferences_general_unknown_only_default" />
+        <CheckBoxPreference
+            android:key="unknown_only"
+            android:title="@string/preferences_general_unknown_only_title"
+            android:summary="@string/preferences_general_unknown_only_summary"
+            android:defaultValue="@string/preferences_general_unknown_only_default" />
 
-		<CheckBoxPreference
-			android:key="show_count"
-			android:title="@string/preferences_general_show_count_title"
-			android:summary="@string/preferences_general_show_count_summary"
-			android:defaultValue="@string/preferences_general_show_count_default" />
+        <CheckBoxPreference
+            android:key="show_count"
+            android:title="@string/preferences_general_show_count_title"
+            android:summary="@string/preferences_general_show_count_summary"
+            android:defaultValue="@string/preferences_general_show_count_default" />
 
-		<ListPreference
-			android:key="position"
-			android:title="@string/preferences_general_position_title"
-			android:summary="@string/preferences_general_position_summary"
-			android:defaultValue="@string/preferences_general_position_default"
-			android:entries="@array/preferences_general_position_entries"
-			android:entryValues="@array/preferences_general_position_values" />
+        <ListPreference
+            android:key="position"
+            android:title="@string/preferences_general_position_title"
+            android:summary="@string/preferences_general_position_summary"
+            android:defaultValue="@string/preferences_general_position_default"
+            android:entries="@array/preferences_general_position_entries"
+            android:entryValues="@array/preferences_general_position_values" />
 
-		<EditTextPreference
-			android:key="number_filter"
-			android:title="@string/preferences_general_number_filter_title"
-			android:summary="@string/preferences_general_number_filter_summary"
-			android:defaultValue="@string/preferences_general_number_filter_default" />
+        <EditTextPreference
+            android:key="number_filter"
+            android:title="@string/preferences_general_number_filter_title"
+            android:summary="@string/preferences_general_number_filter_summary"
+            android:defaultValue="@string/preferences_general_number_filter_default" />
 
-		<EditTextPreference
-			android:key="replace"
-			android:title="@string/preferences_general_replace_title"
-			android:summary="@string/preferences_general_replace_summary"
-			android:defaultValue="@string/preferences_general_replace_default" />
+        <EditTextPreference
+            android:key="replace"
+            android:title="@string/preferences_general_replace_title"
+            android:summary="@string/preferences_general_replace_summary"
+            android:defaultValue="@string/preferences_general_replace_default" />
 
-		<EditTextPreference
-			android:key="faked_number"
-			android:title="@string/preferences_general_faked_number_title"
-			android:summary="@string/preferences_general_faked_number_summary"
-			android:defaultValue="@string/preferences_general_faked_number_default"
-			android:inputType="numberDecimal"
-			android:maxLines="1" />
-	</PreferenceCategory>
+        <EditTextPreference
+            android:key="faked_number"
+            android:title="@string/preferences_general_faked_number_title"
+            android:summary="@string/preferences_general_faked_number_summary"
+            android:defaultValue="@string/preferences_general_faked_number_default"
+            android:inputType="numberDecimal"
+            android:maxLines="1" />
+    </PreferenceCategory>
 
-	<PreferenceCategory
-		android:title="@string/preferences_ldap_connection_category">
+    <PreferenceCategory
+        android:title="@string/preferences_ldap_connection_category">
 
-		<EditTextPreference
-			android:key="server"
-			android:title="@string/preferences_ldap_connection_server_title"
-			android:summary="@string/preferences_ldap_connection_server_summary"
-			android:defaultValue="@string/preferences_ldap_connection_server_default"
-			android:maxLines="1" />
+        <EditTextPreference
+            android:key="server"
+            android:title="@string/preferences_ldap_connection_server_title"
+            android:summary="@string/preferences_ldap_connection_server_summary"
+            android:defaultValue="@string/preferences_ldap_connection_server_default"
+            android:maxLines="1" />
 
-		<EditTextPreference
-			android:key="port"
-			android:title="@string/preferences_ldap_connection_port_title"
-			android:summary="@string/preferences_ldap_connection_port_summary"
-			android:defaultValue="@string/preferences_ldap_connection_port_default"
-			android:inputType="numberDecimal"
-			android:maxLines="1" />
+        <EditTextPreference
+            android:key="port"
+            android:title="@string/preferences_ldap_connection_port_title"
+            android:summary="@string/preferences_ldap_connection_port_summary"
+            android:defaultValue="@string/preferences_ldap_connection_port_default"
+            android:inputType="numberDecimal"
+            android:maxLines="1" />
 
-		<ListPreference
-			android:key="protocol"
-			android:title="@string/preferences_ldap_connection_protocol_title"
-			android:summary="@string/preferences_ldap_connection_protocol_summary"
-			android:defaultValue="@string/preferences_ldap_connection_protocol_default"
-			android:entries="@array/preferences_ldap_connection_protocol_entries"
-			android:entryValues="@array/preferences_ldap_connection_protocol_values" />
+        <ListPreference
+            android:key="protocol"
+            android:title="@string/preferences_ldap_connection_protocol_title"
+            android:summary="@string/preferences_ldap_connection_protocol_summary"
+            android:defaultValue="@string/preferences_ldap_connection_protocol_default"
+            android:entries="@array/preferences_ldap_connection_protocol_entries"
+            android:entryValues="@array/preferences_ldap_connection_protocol_values" />
 
-		<EditTextPreference
-			android:key="binddn"
-			android:title="@string/preferences_ldap_connection_binddn_title"
-			android:summary="@string/preferences_ldap_connection_binddn_summary"
-			android:defaultValue="@string/preferences_ldap_connection_binddn_default" />
+        <EditTextPreference
+            android:key="binddn"
+            android:title="@string/preferences_ldap_connection_binddn_title"
+            android:summary="@string/preferences_ldap_connection_binddn_summary"
+            android:defaultValue="@string/preferences_ldap_connection_binddn_default" />
 
-		<EditTextPreference
-			android:key="password"
-			android:title="@string/preferences_ldap_connection_password_title"
-			android:summary="@string/preferences_ldap_connection_password_summary"
-			android:password="true"
-			android:maxLines="1" />
-	</PreferenceCategory>
+        <EditTextPreference
+            android:key="password"
+            android:title="@string/preferences_ldap_connection_password_title"
+            android:summary="@string/preferences_ldap_connection_password_summary"
+            android:password="true"
+            android:maxLines="1" />
+    </PreferenceCategory>
 
-	<PreferenceCategory
-		android:title="@string/preferences_ldap_search_category">
+    <PreferenceCategory
+        android:title="@string/preferences_ldap_search_category">
 
-		<EditTextPreference
-			android:key="basedn"
-			android:title="@string/preferences_ldap_search_basedn_title"
-			android:summary="@string/preferences_ldap_search_basedn_summary"
-			android:defaultValue="@string/preferences_ldap_search_basedn_default" />
+        <EditTextPreference
+            android:key="basedn"
+            android:title="@string/preferences_ldap_search_basedn_title"
+            android:summary="@string/preferences_ldap_search_basedn_summary"
+            android:defaultValue="@string/preferences_ldap_search_basedn_default" />
 
-		<EditTextPreference
-			android:key="search_filter"
-			android:title="@string/preferences_ldap_search_filter_title"
-			android:summary="@string/preferences_ldap_search_filter_summary"
-			android:defaultValue="@string/preferences_ldap_search_filter_default" />
+        <EditTextPreference
+            android:key="search_filter"
+            android:title="@string/preferences_ldap_search_filter_title"
+            android:summary="@string/preferences_ldap_search_filter_summary"
+            android:defaultValue="@string/preferences_ldap_search_filter_default" />
 
-		<EditTextPreference
-			android:key="name_attribute"
-			android:title="@string/preferences_ldap_search_name_attribute_title"
-			android:summary="@string/preferences_ldap_search_name_attribute_summary"
-			android:defaultValue="@string/preferences_ldap_search_name_attribute_default"
-			android:maxLines="1" />
+        <EditTextPreference
+            android:key="name_attribute"
+            android:title="@string/preferences_ldap_search_name_attribute_title"
+            android:summary="@string/preferences_ldap_search_name_attribute_summary"
+            android:defaultValue="@string/preferences_ldap_search_name_attribute_default"
+            android:maxLines="1" />
 
-		<EditTextPreference
-			android:key="other_attributes"
-			android:title="@string/preferences_ldap_search_other_attributes_title"
-			android:summary="@string/preferences_ldap_search_other_attributes_summary"
-			android:defaultValue="@string/preferences_ldap_search_other_attributes_default"
-			android:maxLines="1" />
+        <EditTextPreference
+            android:key="other_attributes"
+            android:title="@string/preferences_ldap_search_other_attributes_title"
+            android:summary="@string/preferences_ldap_search_other_attributes_summary"
+            android:defaultValue="@string/preferences_ldap_search_other_attributes_default"
+            android:maxLines="1" />
 
-		<EditTextPreference
-			android:key="separator"
-			android:title="@string/preferences_ldap_search_separator_title"
-			android:summary="@string/preferences_ldap_search_separator_summary"
-			android:defaultValue="@string/preferences_ldap_search_separator_default"
-			android:maxLines="1" />
-	</PreferenceCategory>
+        <EditTextPreference
+            android:key="separator"
+            android:title="@string/preferences_ldap_search_separator_title"
+            android:summary="@string/preferences_ldap_search_separator_summary"
+            android:defaultValue="@string/preferences_ldap_search_separator_default"
+            android:maxLines="1" />
+    </PreferenceCategory>
 </PreferenceScreen>

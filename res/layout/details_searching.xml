@@ -18,46 +18,46 @@
 -->
 
 <LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/details_searching"
-	android:orientation="vertical"
-	android:layout_width="fill_parent"
-	android:layout_height="wrap_content"
-	android:gravity="center"
-	android:padding="5dip"
-	android:background="#DFFB">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/details_searching"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="5dip"
+    android:background="#DFFB">
 
-	<TextView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="x"
-		android:height="0dip"
-		android:width="300dip" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x"
+        android:height="0dip"
+        android:width="300dip" />
 
-	<LinearLayout
-		android:orientation="horizontal"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:gravity="center_vertical">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
 
-		<ProgressBar
-			android:id="@+id/spinner"
-			android:indeterminate="true"
-			android:indeterminateBehavior="repeat"
-			style="?android:attr/progressBarStyleSmall"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:gravity="center_vertical" />
+        <ProgressBar
+            android:id="@+id/spinner"
+            android:indeterminate="true"
+            android:indeterminateBehavior="repeat"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" />
 
-		<TextView
-			android:id="@+id/name"
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:height="50dip"
-			android:text="@string/details_searching"
-			android:textStyle="bold"
-			android:textColor="@android:color/black"
-			android:paddingLeft="10dip"
-			android:gravity="center_vertical" />
-	</LinearLayout>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:height="50dip"
+            android:text="@string/details_searching"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:paddingLeft="10dip"
+            android:gravity="center_vertical" />
+    </LinearLayout>
 </LinearLayout>
